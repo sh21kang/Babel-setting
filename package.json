@@ -1,0 +1,16 @@
+{
+  "name": "babel-setting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6"
+  },
+  "scripts": {
+    "serve": "node build/index.js",
+    "build": "babel src -d build",
+    "postbuild": "cd src && copy ./api/**/*.graphql ../build/api"
+  }
+}
